@@ -95,8 +95,15 @@ $GLOBALS['TL_DCA']['tl_ticker_category'] = array
     // Palettes
     'palettes' => array
     (
-        'default'                     => '{title_legend},title;{parameter_legend},parameter,speed,wait',
+		'__selector__'                => array('parameter'),
+        'default'                     => '{title_legend},title;{parameter_legend},parameter',
     ),
+
+	// Subpalettes
+	'subpalettes' => array
+	(
+		'parameter'                   => 'delay,duration,direction,timing,pauseOnHover',
+	),
 
     // Fields
     'fields' => array
@@ -128,21 +135,53 @@ $GLOBALS['TL_DCA']['tl_ticker_category'] = array
             'eval'                    => array('submitOnChange'=>true),
             'sql'                     => "char(1) NOT NULL default ''"
         ),
-        'speed' => array
+        'delay' => array
         (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_ticker_category']['speed'],
-            'default'                 => 60,
+            'label'                   => &$GLOBALS['TL_LANG']['tl_ticker_category']['delay'],
+            'default'                 => 1000,
+            'exclude'                 => true,
             'inputType'               => 'text',
             'eval'                    => array('mandatory'=>true, 'maxlength'=>10, 'tl_class'=>'w50'),
-            'sql'                     => "int(10) unsigned NOT NULL default '60'"
+            'sql'                     => "int(10) unsigned NOT NULL default '1000'"
         ),
-        'wait' => array
+        'duration' => array
         (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_ticker_category']['wait'],
-            'default'                 => 3000,
+            'label'                   => &$GLOBALS['TL_LANG']['tl_ticker_category']['duration'],
+            'default'                 => 5000,
+            'exclude'                 => true,
             'inputType'               => 'text',
             'eval'                    => array('mandatory'=>true, 'maxlength'=>10, 'tl_class'=>'w50'),
-            'sql'                     => "int(10) unsigned NOT NULL default '3000'"
+            'sql'                     => "int(10) unsigned NOT NULL default '5000'"
         ),
+        'direction' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_ticker_category']['direction'],
+            'default'                 => 'normal',
+            'exclude'                 => true,
+            'inputType'               => 'select',
+			'options'                 => array('normal', 'reverse'),
+			'eval'                    => array('tl_class'=>'w50'),
+			'reference'               => &$GLOBALS['TL_LANG']['tl_ticker_category'],
+			'sql'                     => "varchar(8) NOT NULL default ''"
+        ),
+        'timing' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_ticker_category']['timing'],
+            'default'                 => 'linear',
+            'exclude'                 => true,
+            'inputType'               => 'select',
+			'options'                 => array('linear', 'ease', 'ease-in', 'ease-out', 'ease-in-out'),
+			'eval'                    => array('tl_class'=>'w50'),
+			'reference'               => &$GLOBALS['TL_LANG']['tl_ticker_category'],
+			'sql'                     => "varchar(16) NOT NULL default ''"
+        ),
+        'pauseOnHover' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_ticker_category']['pauseOnHover'],
+            'exclude'                 => true,
+            'inputType'               => 'checkbox',
+            'eval'                    => array('tl_class'=>'w50 m12'),
+            'sql'                     => "char(1) NOT NULL default ''"
+        )
     )
 );

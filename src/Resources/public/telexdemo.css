@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+/* 22-9-2015, 11:30 */
+
+
+.msg-red {
+//  border-color: #d32f2f;
+    background-color: #d32f2f;
+    color: #ffcdd2;
+}
+
+.msg-pink {
+//  border-color: #f06292;
+    background-color: #F8BBD0;
+}
+
+.msg-purple {
+//  border-color: #8e24aa;
+    background-color: #ce93d8;
+}
+
+.msg-deeppurple {
+//  border-color: #512da8;
+    background-color: #4527a0;
+    color: #ede7f6;
+}
+
+.msg-indigo {
+//  border-color: #5c6bc0;
+    background-color: #9fa8da;
+}
+
+.msg-blue {
+//  border-color: #1e88e5;
+    background-color: #0d47a1;
+    color: #e3f2fd;
+}
+
+.msg-lightblue {
+//  border-color: #4fc3f7;
+    background-color: #90caf9;
+}
+
+.msg-cyan {
+//  border-color: #80deea;
+    background-color: #006064;
+    color: #e0f7fa;
+}
+
+.msg-teal {
+//  border-color: #00897b;
+    background-color: #B2DFDB;
+}
+
+.msg-green {
+//  border-color: #4caf50;
+    background-color: #1b5e20;
+    color: #e8f5e9;
+}
+
+.msg-lightgreen {
+//  border-color: #9ccc65;
+    background-color: #aed581;
+}
+
+.msg-lime {
+//  border-color: #c0ca33;
+    background-color: #cddc39;
+}
+
+.msg-yellow {
+//  border-color: #ffeb3b;
+    background-color: #ffee58;
+}
+
+.msg-amber {
+//  border-color: #ffc107;
+    background-color: #FFECB3;
+}
+
+.msg-orange {
+//  border-color: #ff9800;
+    background-color: #ffb74d;
+}
+
+.msg-deeporange {
+//  border-color: #f4511e;
+    background-color: #e64a19;
+    color: #fbe9e7;
+}
+
+.msg-brown {
+//  border-color: #6d4c41;
+    background-color: #5d4037;
+    color: #efebe9;
+}
+
+.msg-grey {
+//  border-color: #9e9e9e;
+    background-color: #bdbdbd;
+}
+
+.msg-bluegrey {
+//  border-color: #607d8b;
+    background-color: #37474f;
+    color: #eceff1;
+}
+
+.msg-white {
+//  border-color: #ffffff;
+    background-color: #ffffff;
+}
+
+.msg-black {
+//  border-color: #000000;
+    background-color: #202020;
+    color: #E0E0E0;
+}
+
+.telex-pic {
+    width: 240px;
+    height: 160px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.msg-pic {
+    width: 240px;
+    padding: 0;
+}
