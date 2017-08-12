@@ -1,0 +1,27 @@
+<!-- indexer::stop -->
+<?php
+  $GLOBALS['TL_CSS']['ticker'] = 'system/modules/ticker/assets/style.css';
+  $GLOBALS['TL_JAVASCRIPT']['ticker'] = 'system/modules/ticker/assets/dhtml_ticker.js';
+?>
+<section class="<?php echo $this->class; ?> block"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+<?php if ($this->headline): ?>
+<<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+<?php endif; ?>
+<div class="tickertext" id="ticker<?php echo $this->ticker['pid']; ?>"></div>
+</section>
+
+<script>
+/* <![CDATA[ */
+	var delay<?php echo $this->ticker['pid']; ?>=<?php echo $this->ticker['speed']; ?>;
+	var wartezeit<?php echo $this->ticker['pid']; ?>=<?php echo $this->ticker['wait']; ?>;
+	var nextm<?php echo $this->ticker['pid']; ?>=0;
+<?php $msg=''; $jumpTo=''; foreach( $this->ticker['items'] as $tick ):
+    $msg .= "'" . $tick['tickertext'] . " ',";
+    $jumpto .= "'" . $tick['url'] . "',";
+endforeach; ?>
+	var msg<?php echo $this->ticker['pid']; ?>=new Array(<?php echo trim($msg, ', '); ?>);
+	var jumpto<?php echo $this->ticker['pid']; ?>=new Array(<?php echo trim($jumpto, ', '); ?>);
+	window.addEvent('domready', function(){start_ticker(<?php echo $this->ticker['pid']; ?>);});
+/* ]]> */
+</script>
+<!-- indexer::continue -->
