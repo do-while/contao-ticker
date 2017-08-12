@@ -35,4 +35,4 @@ array_insert($GLOBALS['FE_MOD']['miscellaneous'], 0, array
  * HOOKS
  * -------------------------------------------------------------------------
  */
-//$GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array('Softleister\Ticker\tickerHookControl', 'tickerInsertTags');
+$GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array('Softleister\Ticker\tickerHookControl', 'tickerInsertTags');

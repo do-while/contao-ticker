@@ -86,7 +86,7 @@ class ModuleTicker extends \Module
             $url        = $this->replaceInsertTags( $objTicker->url, false );
             if( empty( $tickertext ) ) continue;                                    // Eintrag nicht ticken
             
-            $content = $tickertext;
+            $content = str_replace( "'", '&#039;', $tickertext );
             if( !empty( $url ) ) {
                 $content = '<a href="' . $url . '" title="' . (empty($linktitle) ? $tickertext : $linktitle) . '"';
                 if( $objTicker->target == 1 ) $content .= ' target="_blank"';
