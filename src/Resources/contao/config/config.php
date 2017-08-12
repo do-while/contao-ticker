@@ -3,8 +3,8 @@
 /**
  * @copyright  Softleister 2008-2017
  * @author     Softleister <info@softleister.de>
- * @package    contao-ticker
- * @license    LGPL
+ * @package    contao-ticker                ä
+ * @license    MIT
  * @see	       https://github.com/do-while/contao-ticker
  *
  */
@@ -35,4 +35,4 @@ array_insert($GLOBALS['FE_MOD']['miscellaneous'], 0, array
  * HOOKS
  * -------------------------------------------------------------------------
  */
-$GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array('Softleister\Ticker\ModuleTickerFE', 'TickerInsertTags');
+//$GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array('Softleister\Ticker\tickerHookControl', 'tickerInsertTags');

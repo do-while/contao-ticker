@@ -4,7 +4,7 @@
  * @copyright  Softleister 2008-2017
  * @author     Softleister <info@softleister.de>
  * @package    contao-ticker
- * @license    LGPL
+ * @license    MIT
  * @see	       https://github.com/do-while/contao-ticker
  *
  */
@@ -13,7 +13,9 @@
  * Fields
  */
 $GLOBALS['TL_LANG']['tl_ticker']['tickertext'] = array('Text of ticker', 'Please enter a text for the ticker.<br />With {{ticker::next_event::ID}} you can insert the teaser of the next event from Calendar ID.');
+$GLOBALS['TL_LANG']['tl_ticker']['color']      = array('Background color', 'Color of the ticker for this message, color sets a CSS class');
 $GLOBALS['TL_LANG']['tl_ticker']['jumpTo']     = array('Jump to page', 'Please select the page to which visitors will be redirected when clicking the ticker.');
+$GLOBALS['TL_LANG']['tl_ticker']['linktitle']  = array('Link title', 'Title of hyperlink (Tooltip), sets the ticker text as title if empty');
 $GLOBALS['TL_LANG']['tl_ticker']['published']  = array('Published', 'The ticker text will not be visible on your website until it is published.');
 $GLOBALS['TL_LANG']['tl_ticker']['start']      = array('Show from', 'Do not show the ticker message on the website before this day and time. Please add time manually.');
 $GLOBALS['TL_LANG']['tl_ticker']['stop']       = array('Show until', 'Do not show the ticker message on the website on and after this day and time. Please add time manually.');

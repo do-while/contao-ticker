@@ -1,6 +1,27 @@
-/* Contao ticker style sheet */
+/* Styles contao-ticker */
+.mod_ticker .tickertext { background-color:#eee; }
+.mod_ticker .tickertext a { text-decoration:none; }
+.mod_ticker .telex-msg { padding-top:0.3em; }
 
-.tickertext a
-{
-    display:block;
-}
+/* Farben */
+.mod_ticker .msg-red, .mod_ticker .msg-red a {               background-color:#d32f2f; color:#ffcdd2; }
+.mod_ticker .msg-pink, .mod_ticker .msg-pink a {             background-color:#F8BBD0; color:#333; }
+.mod_ticker .msg-purple, .mod_ticker .msg-purple a {         background-color:#ce93d8; color:#333; }
+.mod_ticker .msg-deeppurple, .mod_ticker .msg-deeppurple a { background-color:#4527a0; color:#ede7f6; }
+.mod_ticker .msg-indigo, .mod_ticker .msg-indigo a {         background-color:#9fa8da; color:#333; }               
+.mod_ticker .msg-blue, .mod_ticker .msg-blue a {             background-color:#0d47a1; color:#e3f2fd; }
+.mod_ticker .msg-lightblue, .mod_ticker .msg-lightblue a {   background-color:#90caf9; color:#333; }               
+.mod_ticker .msg-cyan, .mod_ticker .msg-cyan a {             background-color:#006064; color:#e0f7fa; }
+.mod_ticker .msg-teal, .mod_ticker .msg-teal a {             background-color:#B2DFDB; color:#333; }               
+.mod_ticker .msg-green, .mod_ticker .msg-green a {           background-color:#1b5e20; color:#e8f5e9; }
+.mod_ticker .msg-lightgreen, .mod_ticker .msg-lightgreen a { background-color:#aed581; color:#333; }               
+.mod_ticker .msg-lime, .mod_ticker .msg-lime a {             background-color:#cddc39; color:#333; }               
+.mod_ticker .msg-yellow, .mod_ticker .msg-yellow a {         background-color:#ffee58; color:#333; }               
+.mod_ticker .msg-amber, .mod_ticker .msg-amber a {           background-color:#FFECB3; color:#333; }               
+.mod_ticker .msg-orange, .mod_ticker .msg-orange a {         background-color:#ffb74d; color:#333; }               
+.mod_ticker .msg-deeporange, .mod_ticker .msg-deeporange a { background-color:#e64a19; color:#fbe9e7; }
+.mod_ticker .msg-brown, .mod_ticker .msg-brown a {           background-color:#5d4037; color:#efebe9; }
+.mod_ticker .msg-grey, .mod_ticker .msg-grey a {             background-color:#bdbdbd; color:#333; }               
+.mod_ticker .msg-bluegrey, .mod_ticker .msg-bluegrey a {     background-color:#37474f; color:#eceff1; }
+.mod_ticker .msg-white, .mod_ticker .msg-white a {           background-color:#ffffff; color:#333; }               
+.mod_ticker .msg-black, .mod_ticker .msg-black a {           background-color:#202020; color:#E0E0E0; }

@@ -4,7 +4,7 @@
  * @copyright  Softleister 2008-2017
  * @author     Softleister <info@softleister.de>
  * @package    contao-ticker
- * @license    LGPL
+ * @license    MIT
  * @see	       https://github.com/do-while/contao-ticker
  *
  */
@@ -141,7 +141,7 @@ $GLOBALS['TL_DCA']['tl_ticker_category'] = array
             'default'                 => 1000,
             'exclude'                 => true,
             'inputType'               => 'text',
-            'eval'                    => array('mandatory'=>true, 'maxlength'=>10, 'tl_class'=>'w50'),
+            'eval'                    => array('mandatory'=>true, 'rgxp'=>'digit', 'maxlength'=>10, 'tl_class'=>'w50'),
             'sql'                     => "int(10) unsigned NOT NULL default '1000'"
         ),
         'duration' => array
@@ -150,7 +150,7 @@ $GLOBALS['TL_DCA']['tl_ticker_category'] = array
             'default'                 => 5000,
             'exclude'                 => true,
             'inputType'               => 'text',
-            'eval'                    => array('mandatory'=>true, 'maxlength'=>10, 'tl_class'=>'w50'),
+            'eval'                    => array('mandatory'=>true, 'rgxp'=>'digit', 'maxlength'=>10, 'tl_class'=>'w50'),
             'sql'                     => "int(10) unsigned NOT NULL default '5000'"
         ),
         'direction' => array

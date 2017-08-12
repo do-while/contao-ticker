@@ -4,7 +4,7 @@
  * @copyright  Softleister 2008-2017
  * @author     Softleister <info@softleister.de>
  * @package    contao-ticker
- * @license    LGPL
+ * @license    MIT
  * @see	       https://github.com/do-while/contao-ticker
  *
  */
@@ -99,8 +99,8 @@ $GLOBALS['TL_DCA']['tl_ticker'] = array
     // Palettes
     'palettes' => array
     (
-        'default'                     => '{ticker_legend},tickertext;'
-                                        .'{link_legend:hide},url,target;'
+        'default'                     => '{ticker_legend},tickertext,color;'
+                                        .'{link_legend:hide},url,target,linktitle;'
                                         .'{publish_legend},published,start,stop'
     ),
 
@@ -129,8 +129,42 @@ $GLOBALS['TL_DCA']['tl_ticker'] = array
             'exclude'                 => true,
             'search'                  => true,
             'inputType'               => 'text',
-            'eval'                    => array('mandatory'=>true, 'allowHtml'=>true,'maxlength'=>255, 'tl_class'=>'long'),
+            'eval'                    => array('mandatory'=>true, 'tl_class'=>'long'),
             'sql'                     => "text NULL"
+        ),
+        'color' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['MSC']['color'],
+            'default'                 => 'msg-white',
+            'exclude'                 => true,
+            'inputType'               => 'select',
+			'options'                 => array
+			                             (
+			                                'msg-white'      => 'White',
+                                            'msg-black'      => 'Black',
+                                            'msg-red'        => 'Red',
+                                            'msg-pink'       => 'Pink',
+                                            'msg-purple'     => 'Purple',
+                                            'msg-deeppurple' => 'Deep Purple',
+                                            'msg-indigo'     => 'Indigo',
+                                            'msg-blue'       => 'Blue',
+                                            'msg-lightblue'  => 'Light Blue',
+                                            'msg-cyan'       => 'Cyan',
+                                            'msg-teal'       => 'Teal',
+                                            'msg-green'      => 'Green',
+                                            'msg-lightgreen' => 'Light Green',
+                                            'msg-lime'       => 'Lime',
+                                            'msg-yellow'     => 'Yellow',
+                                            'msg-amber'      => 'Amber',
+                                            'msg-orange'     => 'Orange',
+                                            'msg-deeporange' => 'Deep Orange',
+                                            'msg-brown'      => 'Brown',
+                                            'msg-grey'       => 'Grey',
+                                            'msg-bluegrey'   => 'Blue Grey'
+			                             ),
+			'eval'                    => array('chosen'=>true, 'tl_class'=>'w50'),
+			'reference'               => &$GLOBALS['TL_LANG']['tl_ticker_category'],
+			'sql'                     => "varchar(32) NOT NULL default ''"
         ),
         'url' => array
         (
@@ -149,6 +183,15 @@ $GLOBALS['TL_DCA']['tl_ticker'] = array
             'inputType'               => 'checkbox',
             'eval'                    => array('tl_class'=>'w50 m12'),
             'sql'                     => "char(1) NOT NULL default ''"
+        ),
+        'linktitle' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_ticker']['linktitle'],
+            'exclude'                 => true,
+            'search'                  => true,
+            'inputType'               => 'text',
+            'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50'),
+            'sql'                     => "varchar(255) NOT NULL default ''"
         ),
         'published' => array
         (

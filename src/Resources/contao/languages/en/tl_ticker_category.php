@@ -4,7 +4,7 @@
  * @copyright  Softleister 2008-2017
  * @author     Softleister <info@softleister.de>
  * @package    contao-ticker
- * @license    LGPL
+ * @license    MIT
  * @see        https://github.com/do-while/contao-ticker
  *
  */
