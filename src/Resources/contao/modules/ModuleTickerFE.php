@@ -9,7 +9,9 @@
  *
  */
 
-class ModuleTickerFE extends Frontend
+namespace Softleister\Ticker;
+
+class ModuleTickerFE extends \Frontend
 {
     /**
      * Zusätzliche InsertTags für Tickermodul

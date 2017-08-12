@@ -9,6 +9,8 @@
  *
  */
 
+namespace Softleister\Ticker;
+
 /**
  * Class ModuleTicker 
  *
@@ -16,7 +18,7 @@
  * @author     Softleister 
  * @package    Extension Ticker
  */
-class ModuleTicker extends Module
+class ModuleTicker extends \Module
 {
     protected $strTemplate = 'mod_ticker';
 
