@@ -134,7 +134,7 @@ $GLOBALS['TL_DCA']['tl_ticker'] = array
         ),
         'color' => array
         (
-            'label'                   => &$GLOBALS['TL_LANG']['MSC']['color'],
+            'label'                   => &$GLOBALS['TL_LANG']['tl_ticker']['color'],
             'default'                 => 'msg-white',
             'exclude'                 => true,
             'inputType'               => 'select',
