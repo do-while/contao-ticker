@@ -23,8 +23,11 @@ Für einen Ticker mit Eventdaten bringt das Modul eigene InsertTags mit:<br>
 * **{{ticker::next_eventN::ID}}** wird ersetzt durch Datum und Eventteaser des 2. bis 9. Termins (N = 2...9)
 * **{{ticker::next_event_title::ID}}** wird ersetzt durch Datum und Titel des nächsten Termins
 * **{{ticker::next_event_titleN::ID}}** wird ersetzt durch Datum und Titel des 2. bis 9. Termins (N = 2...9)
-
-
+                                        
+                                        
+Das Tickerscript basiert auf dem Projekt https://github.com/sjaakp/telex
+                                        
+                                        
 **Version:**<br>
 * 1.0.0 stable - 2017-08-12<br>
 Version für Contao ab Version 4.4 LTS
@@ -53,6 +56,9 @@ For a ticker with event data, the module has its own InsertTags:
 * **{{ticker::next_eventN::ID}}** will be replaced by the date and eventteaser of the second to ninth date (N = 2 to 9)
 * **{{ticker::next_event_title::ID}}** will be replaced by the date and title of the next event
 * **{{ticker::next_event_titleN::ID}}** will be replaced by the date and title of the second to ninth date (N = 2 to 9)
+
+
+The ticker script is based on project https://github.com/sjaakp/telex
 
 
 ___
