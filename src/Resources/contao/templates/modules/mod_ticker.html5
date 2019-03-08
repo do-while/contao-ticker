@@ -2,8 +2,7 @@
 <!-- indexer::stop -->
 <?php
   $GLOBALS['TL_CSS']['ticker'] = 'bundles/softleisterticker/style.css';
-  $GLOBALS['TL_JAVASCRIPT']['jqueryui'] = 'assets/jquery-ui/js/jquery-ui.min.js';
-  $GLOBALS['TL_JAVASCRIPT']['ticker'] = 'bundles/softleisterticker/telex.min.js';
+  $GLOBALS['TL_JAVASCRIPT']['ticker'] = 'bundles/softleisterticker/telex.js';
 ?>
 <section class="<?php echo $this->class; ?> block"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
 <?php if ($this->headline): ?>
@@ -12,23 +11,27 @@
   <div id="tx_<?= $this->ticker['id'] ?>" class="tickertext"></div>
 </section>
 <script>
-$(document).ready(function () {
-  $('#tx_<?= $this->ticker['id'] ?>').telex({
-    messages: [
+jQuery.noConflict();
+(function($) {
+  $(document).ready(function () {
+    var qtx = Telex.widget( "tx_<?= $this->ticker['id'] ?>", 
+      {/* options */
+        speed: <?= $this->ticker['duration'] ?>,
+        direction: '<?= $this->ticker['direction'] ?>',
+        timing: '<?= $this->ticker['timing'] ?>',
+        pauseOnHover: <?= $this->ticker['pauseOnHover'] ? 'true' : 'false' ?>
+      }, 
+      [/* messages */
 <?php foreach( $this->items as $item ): ?>
-                {
-                  id: '<?= $item['id'] ?>',
-                  class: '<?= $item['class'] ?>',
-                  content: '<?= $item['content'] ?>'
-                },
+        {
+          id: '<?= $item['id'] ?>',
+          class: '<?= $item['class'] ?>',
+          content: '<?= $item['content'] ?>'
+        },
 <?php endforeach; ?>
-              ],
-    delay: <?= $this->ticker['delay'] ?>,
-    duration: <?= $this->ticker['duration'] ?>,
-    direction: '<?= $this->ticker['direction'] ?>',
-    timing: '<?= $this->ticker['timing'] ?>',
-    pauseOnHover: <?= $this->ticker['pauseOnHover'] ? 'true' : 'false' ?>
+      ]
+    );
   });
-});
+})(jQuery);
 </script>
 <!-- indexer::continue -->

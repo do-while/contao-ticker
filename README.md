@@ -2,26 +2,22 @@
 **Einbindung von einem Laufschrift-Ticker in eine Webseite**
 
 
-Dieses Modul erweitert den Inhalte-Bereich im Backend. Es können mehrere Ticker angelegt und 
-jeweils mit mehreren Texten befüllt werden. Die veröffentlichten Texte des Tickers werden 
-nacheinander dargestellt, wobei die Parameter jeden Tickers individuell angepasst werden können. 
-Jedem Tickertext kann eine Weiterleitungsadresse zugeordnet werden. Bei Klick auf dessen 
-Tickerbereich wird der entsprechende Link aufgerufen. Der Ticker kann als Modul dem Seitenlayout 
-hinzugefügt werden oder über das Content-Element "Modul" verwendet werden.
+Dieses Modul erweitert den Inhalte-Bereich im Backend. Es kÃ¶nnen mehrere Ticker angelegt und jeweils mit mehreren Texten befÃ¼llt werden. Die verÃ¶ffentlichten Texte des Tickers werden nacheinander dargestellt, wobei die Parameter jeden Tickers individuell angepasst werden kÃ¶nnen. 
+Jedem Tickertext kann eine Weiterleitungsadresse zugeordnet werden. Bei Klick auf dessen Tickerbereich wird der entsprechende Link aufgerufen. Der Ticker kann als Modul dem Seitenlayout hinzugefÃ¼gt werden oder Ã¼ber das Content-Element "Modul" verwendet werden.
 
 
-**Für den Betrieb muss jQuery im Layout aktiviert sein**
+**FÃ¼r den Betrieb muss jQuery im Layout aktiviert sein**
 
 
-Das Tickermodul unterstützt InsertTags in den Tickermeldungen. 
+Das Tickermodul unterstÃ¼tzt InsertTags in den Tickermeldungen. 
 
 
-Für einen Ticker mit Eventdaten bringt das Modul eigene InsertTags mit:<br>
+FÃ¼r einen Ticker mit Eventdaten bringt das Modul eigene InsertTags mit:<br>
 (ID ist jweils die ID des Tickers)
-* **{{ticker::next_event::ID}}** wird ersetzt durch Datum und Eventteaser des nächsten Termins
+* **{{ticker::next_event::ID}}** wird ersetzt durch Datum und Eventteaser des nÃ¤chsten Termins
 * **{{ticker::next_event2::ID}}** wird ersetzt durch Datum und Eventteaser des 2. Termins
 * **{{ticker::next_eventN::ID}}** wird ersetzt durch Datum und Eventteaser des 2. bis 9. Termins (N = 2...9)
-* **{{ticker::next_event_title::ID}}** wird ersetzt durch Datum und Titel des nächsten Termins
+* **{{ticker::next_event_title::ID}}** wird ersetzt durch Datum und Titel des nÃ¤chsten Termins
 * **{{ticker::next_event_titleN::ID}}** wird ersetzt durch Datum und Titel des 2. bis 9. Termins (N = 2...9)
                                         
                                         
@@ -29,8 +25,12 @@ Das Tickerscript basiert auf dem Projekt https://github.com/sjaakp/telex
                                         
                                         
 **Version:**<br>
+* 1.1.0 stable - 2019-03-08<br>
+1) Probleme mit Contao 4.7 beseitigt,<br>
+2) Die Geschwindigkeit hat eine neue Skalierung,<br>
+3) Das Startdelay ist entfallen, wird von sjaakp/telex nicht mehr unterstÃ¼tzt
 * 1.0.0 stable - 2017-08-12<br>
-Version für Contao ab Version 4.4 LTS
+Version fÃ¼r Contao ab Version 4.4 LTS
 
 
 ___
@@ -38,12 +38,8 @@ ___
 **Integration of a ticker line into a web page**
 
 
-This module extends the content area in the backend. Several tickers can be created, 
-each with several texts. The published texts of the ticker The parameters one after 
-the other, whereby the parameters of each ticker can be adapted individually.<br>
-A forwarding address can be assigned to each ticker text. By clicking on its ticker 
-area the corresponding link is called. The ticker can be added as a module to the 
-page layout or used via the content module "Module".
+This module extends the content area in the backend. Several tickers can be created, each with several texts. The published texts of the ticker The parameters one after the other, whereby the parameters of each ticker can be adapted individually.<br>
+A forwarding address can be assigned to each ticker text. By clicking on its ticker area the corresponding link is called. The ticker can be added as a module to the page layout or used via the content module "Module".
 
 
 **JQuery must be enabled in the layout**
@@ -68,4 +64,4 @@ https://github.com/do-while/contao-ticker/issues
 
 
 ___
-Softleister - 2017-08-12
+Softleister - 2019-03-08

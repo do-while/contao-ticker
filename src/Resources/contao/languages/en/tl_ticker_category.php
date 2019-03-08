@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @copyright  Softleister 2008-2017
+ * @copyright  Softleister 2008-2019
  * @author     Softleister <info@softleister.de>
  * @package    contao-ticker
  * @license    MIT
@@ -15,8 +15,7 @@
 $GLOBALS['TL_LANG']['tl_ticker_category']['title']        = array('Title', 'Please enter the title of the ticker.');
 $GLOBALS['TL_LANG']['tl_ticker_category']['headline']     = array('Headline', 'Please enter a ticker headline.');
 $GLOBALS['TL_LANG']['tl_ticker_category']['parameter']    = array('Adapt behavior', 'You can change the behavior of this ticker.');
-$GLOBALS['TL_LANG']['tl_ticker_category']['delay']        = array('Start delay', 'Delay before scrolling starts in milliseconds (1/1000 s)');
-$GLOBALS['TL_LANG']['tl_ticker_category']['duration']     = array('Duration', 'Time it takes for a message to scroll along Telex main window in milliseconds (in Millisekunden)');
+$GLOBALS['TL_LANG']['tl_ticker_category']['duration']     = array('Speed', 'Scroll time in pixels/second, default: 200');
 $GLOBALS['TL_LANG']['tl_ticker_category']['direction']    = array('Direction', 'Scroll direction. Can be normal (from right to left) or reverse (from left to right)');
 $GLOBALS['TL_LANG']['tl_ticker_category']['timing']       = array('Animation', 'Determines the way a single message scrolls');
 $GLOBALS['TL_LANG']['tl_ticker_category']['pauseOnHover'] = array('Pause on MouseOver', 'Determines whether the scrolling pauses when the mouse cursor hovers above it');

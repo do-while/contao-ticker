@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @copyright  Softleister 2008-2017
+ * @copyright  Softleister 2008-2019
  * @author     Softleister <info@softleister.de>
  * @package    contao-ticker
  * @license    MIT

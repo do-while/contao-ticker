@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @copyright  Softleister 2008-2017
+ * @copyright  Softleister 2008-2019
  * @author     Softleister <info@softleister.de>
  * @package    contao-ticker
  * @license    MIT
@@ -66,15 +66,13 @@ class ModuleTicker extends \Module
                 $objKat = $this->Database->prepare("SELECT * FROM tl_ticker_category WHERE id=?")->limit(1)->execute($objTicker->pid);
             
                 if( $objKat->parameter == 1 ) {                  // angepasstes Verhalten ?
-                    $arrTicker['delay']        = $objKat->delay;
-                    $arrTicker['duration']     = $objKat->duration < 1000 ? 1000 : $objKat->duration;     // min. 1000
+                    $arrTicker['duration']     = $objKat->duration < 10 ? 10 : $objKat->duration;     // min. 1000
                     $arrTicker['direction']    = $objKat->direction;
                     $arrTicker['timing']       = $objKat->timing;
                     $arrTicker['pauseOnHover'] = $objKat->pauseOnHover;
                 }
                 else {
-                    $arrTicker['delay']        = 1000;
-                    $arrTicker['duration']     = 5000;
+                    $arrTicker['duration']     = 200;
                     $arrTicker['direction']    = 'normal';
                     $arrTicker['timing']       = 'linear';
                     $arrTicker['pauseOnHover'] = false;

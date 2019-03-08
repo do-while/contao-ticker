@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @copyright  Softleister 2008-2017
+ * @copyright  Softleister 2008-2019
  * @author     Softleister <info@softleister.de>
  * @package    contao-ticker
  * @license    MIT
@@ -102,7 +102,7 @@ $GLOBALS['TL_DCA']['tl_ticker_category'] = array
 	// Subpalettes
 	'subpalettes' => array
 	(
-		'parameter'                   => 'delay,duration,direction,timing,pauseOnHover',
+		'parameter'                   => 'duration,direction,timing,pauseOnHover',
 	),
 
     // Fields
@@ -135,23 +135,14 @@ $GLOBALS['TL_DCA']['tl_ticker_category'] = array
             'eval'                    => array('submitOnChange'=>true),
             'sql'                     => "char(1) NOT NULL default ''"
         ),
-        'delay' => array
-        (
-            'label'                   => &$GLOBALS['TL_LANG']['tl_ticker_category']['delay'],
-            'default'                 => 1000,
-            'exclude'                 => true,
-            'inputType'               => 'text',
-            'eval'                    => array('mandatory'=>true, 'rgxp'=>'digit', 'maxlength'=>10, 'tl_class'=>'w50'),
-            'sql'                     => "int(10) unsigned NOT NULL default '1000'"
-        ),
         'duration' => array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tl_ticker_category']['duration'],
-            'default'                 => 5000,
+            'default'                 => 200,
             'exclude'                 => true,
             'inputType'               => 'text',
             'eval'                    => array('mandatory'=>true, 'rgxp'=>'digit', 'maxlength'=>10, 'tl_class'=>'w50'),
-            'sql'                     => "int(10) unsigned NOT NULL default '5000'"
+            'sql'                     => "int(10) unsigned NOT NULL default '200'"
         ),
         'direction' => array
         (
@@ -160,7 +151,7 @@ $GLOBALS['TL_DCA']['tl_ticker_category'] = array
             'exclude'                 => true,
             'inputType'               => 'select',
 			'options'                 => array('normal', 'reverse'),
-			'eval'                    => array('tl_class'=>'w50'),
+			'eval'                    => array('tl_class'=>'clr w50'),
 			'reference'               => &$GLOBALS['TL_LANG']['tl_ticker_category'],
 			'sql'                     => "varchar(8) NOT NULL default ''"
         ),
