@@ -22,10 +22,10 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['ticker_categories'] = array
 (
     'label'             => &$GLOBALS['TL_LANG']['tl_module']['ticker_categories'],
     'exclude'           => true,
-    'inputType'         => 'select',
+    'inputType'         => 'checkbox',
     'options_callback'  => array('tl_module_ticker', 'getTicker'),
-    'eval'              => array('mandatory'=>true, 'chosen'=>true, 'tl_class'=>'w50'),
-    'sql'               => "int(10) unsigned NOT NULL default '0'"
+    'eval'              => array('mandatory'=>true, 'multiple'=>true),
+    'sql'               => "varchar(255) NOT NULL default ''"
 );
 
 
@@ -51,32 +51,3 @@ class tl_module_ticker extends Backend
     }
 
 }
-
-
-
-    /**
-     * Show a hint if a JavaScript library needs to be included in the page layout
-     *
-     * @param object
-     */
-/*  public function showJsLibraryHint($dc)
-    {
-        if ($_POST || Input::get('act') != 'edit')
-        {
-            return;
-        }
-
-        $objCte = ContentModel::findByPk($dc->id);
-
-        if ($objCte === null)
-        {
-            return;
-        }
-
-        if( $objCte->type ) {
-            Message::addInfo(sprintf($GLOBALS['TL_LANG']['tl_content']['includeTemplates'], '', 'j_ticker'));
-        }
-    }
-
-
-*/

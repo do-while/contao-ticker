@@ -25,6 +25,9 @@ Das Tickerscript basiert auf dem Projekt https://github.com/sjaakp/telex
                                         
                                         
 **Version:**<br>
+* 1.2.0 stable - 2019-04-18<br>
+Einschränkung auf ausgewählte Kategorien möglich
+
 * 1.1.0 stable - 2019-03-08<br>
 1) Probleme mit Contao 4.7 beseitigt,<br>
 2) Die Geschwindigkeit hat eine neue Skalierung,<br>

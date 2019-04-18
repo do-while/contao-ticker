@@ -58,7 +58,9 @@ class ModuleTicker extends \Module
         $arrTicker = $arrItems = array();
         $time = time();
 
-        $objTicker = $this->Database->execute("SELECT * FROM tl_ticker WHERE published=1 AND (start='' OR start<$time) AND (stop='' OR stop>$time) ORDER BY sorting");
+        $this->Template->ticker_categories = $this->ticker_categories;
+
+        $objTicker = $this->Database->execute("SELECT * FROM tl_ticker WHERE published=1 AND pid IN (" . implode(',', $this->ticker_categories) . ") AND (start='' OR start<$time) AND (stop='' OR stop>$time) ORDER BY sorting, pid");
       
         while( $objTicker->next() ) {
             if( empty($arrTicker) ) {
@@ -94,6 +96,7 @@ class ModuleTicker extends \Module
 
             $arrItems[] = array (
                             'id'        => $objTicker->id,
+                            'pid'       => $objTicker->pid,
                             'class'     => $objTicker->color,
                             'text'      => $tickertext,
                             'linktitle' => $linktitle,
