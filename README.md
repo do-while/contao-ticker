@@ -25,6 +25,9 @@ Das Tickerscript basiert auf dem Projekt https://github.com/sjaakp/telex
                                         
                                         
 **Version:**<br>
+* 1.2.1 stable - 2020-05-20<br>
+Update sjaakp/telex von 2.0.1 auf 2.0.4
+
 * 1.2.0 stable - 2019-04-18<br>
 Einschränkung auf ausgewählte Kategorien möglich
 
