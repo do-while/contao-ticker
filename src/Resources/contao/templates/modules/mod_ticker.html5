@@ -10,6 +10,7 @@
 <?php endif; ?>
   <div id="tx_<?= $this->ticker['id'] ?>" class="tickertext"></div>
 </section>
+<?php if(count($this->ticker)): ?>
 <script>
 (function($) {
   $(document).ready(function () {
@@ -33,4 +34,5 @@
   });
 })(jQuery);
 </script>
+<?php endif; ?>
 <!-- indexer::continue -->
