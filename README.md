@@ -13,30 +13,27 @@ Das Tickermodul unterstützt InsertTags in den Tickermeldungen.
 
 
 Für einen Ticker mit Eventdaten bringt das Modul eigene InsertTags mit:<br>
-(ID ist jweils die ID des Tickers)
-* **{{ticker::next_event::ID}}** wird ersetzt durch Datum und Eventteaser des nächsten Termins
-* **{{ticker::next_event2::ID}}** wird ersetzt durch Datum und Eventteaser des 2. Termins
-* **{{ticker::next_eventN::ID}}** wird ersetzt durch Datum und Eventteaser des 2. bis 9. Termins (N = 2...9)
-* **{{ticker::next_event_title::ID}}** wird ersetzt durch Datum und Titel des nächsten Termins
-* **{{ticker::next_event_titleN::ID}}** wird ersetzt durch Datum und Titel des 2. bis 9. Termins (N = 2...9)
+(ID ist jeweils die ID des Newsarchivs)
+* **{{ticker::next_event::ID}}** wird durch Datum und Eventteaser des nächsten Termins ersetzt
+* **{{ticker::next_event2::ID}}** wird durch Datum und Eventteaser des 2. Termins ersetzt
+* **{{ticker::next_eventN::ID}}** wird durch Datum und Eventteaser des 2. bis 9. Termins (N = 2...9) ersetzt
+* **{{ticker::next_event_title::ID}}** wird durch Datum und Titel des nächsten Termins ersetzt
+* **{{ticker::next_event_titleN::ID}}** wird durch Datum und Titel des 2. bis 9. Termins (N = 2...9) ersetzt
                                         
                                         
 Das Tickerscript basiert auf dem Projekt https://github.com/sjaakp/telex
                                         
                                         
 **Version:**<br>
-* 1.2.1 stable - 2020-05-20<br>
-Update sjaakp/telex von 2.0.1 auf 2.0.4
+* 2.0.0 stable - 2024-08-21<br>- Bundle für Contao ab 5.3<br>- Update sjaakp/telex von 2.0.4 auf 2.0.7
 
-* 1.2.0 stable - 2019-04-18<br>
-Einschränkung auf ausgewählte Kategorien möglich
+* 1.2.1 stable - 2020-05-20<br>- Update sjaakp/telex von 2.0.1 auf 2.0.4
 
-* 1.1.0 stable - 2019-03-08<br>
-1) Probleme mit Contao 4.7 beseitigt,<br>
-2) Die Geschwindigkeit hat eine neue Skalierung,<br>
-3) Das Startdelay ist entfallen, wird von sjaakp/telex nicht mehr unterstützt
-* 1.0.0 stable - 2017-08-12<br>
-Version für Contao ab Version 4.4 LTS
+* 1.2.0 stable - 2019-04-18<br>- Einschränkung auf ausgewählte Kategorien möglich
+
+* 1.1.0 stable - 2019-03-08<br>- Probleme mit Contao 4.7 beseitigt,<br>- Die Geschwindigkeit hat eine neue Skalierung,<br>- Das Startdelay ist entfallen, wird von sjaakp/telex nicht mehr unterstützt
+
+* 1.0.0 stable - 2017-08-12<br>- Version für Contao ab Version 4.4 LTS
 
 
 ___
@@ -44,20 +41,20 @@ ___
 **Integration of a ticker line into a web page**
 
 
-This module extends the content area in the backend. Several tickers can be created, each with several texts. The published texts of the ticker The parameters one after the other, whereby the parameters of each ticker can be adapted individually.<br>
-A forwarding address can be assigned to each ticker text. By clicking on its ticker area the corresponding link is called. The ticker can be added as a module to the page layout or used via the content module "Module".
+This module extends the content area in the backend. Several tickers can be created and each filled with several texts. The published ticker texts are displayed one after the other, whereby the parameters of each ticker can be customised individually.<br>
+A forwarding address can be assigned to each ticker text. Clicking on its ticker area calls up the corresponding link. The ticker can be added to the page layout as a module or used via the ‘Module’ content element.
 
 
 **JQuery must be enabled in the layout**
 
 
-For a ticker with event data, the module has its own InsertTags:
-(ID is the ID of the ticker)
-* **{{ticker::next_event::ID}}** will be replaced by the date and eventteaser of the next event
-* **{{ticker::next_event2::ID}}** will be replaced by date and eventteaser of the 2nd date
-* **{{ticker::next_eventN::ID}}** will be replaced by the date and eventteaser of the second to ninth date (N = 2 to 9)
-* **{{ticker::next_event_title::ID}}** will be replaced by the date and title of the next event
-* **{{ticker::next_event_titleN::ID}}** will be replaced by the date and title of the second to ninth date (N = 2 to 9)
+The module has its own insert tags for a ticker with event data:<br>
+(ID is the ID of the news archive in each case)
+* **{{ticker::next_event::ID}}** is replaced by the date and event teaser of the next event
+* **{{ticker::next_event2::ID}}** will be replaced by date and event teaser of the 2nd event
+* **{{ticker::next_eventN::ID}}** is replaced by the date and event teaser of the 2nd to 9th event (N = 2...9)
+* **{{ticker::next_event_title::ID}}** is replaced by the date and title of the next event
+* **{{ticker::next_event_titleN::ID}}** is replaced by the date and title of the 2nd to 9th event (N = 2...9)
 
 
 The ticker script is based on project https://github.com/sjaakp/telex
@@ -70,4 +67,4 @@ https://github.com/do-while/contao-ticker/issues
 
 
 ___
-Softleister - 2019-03-08
+Softleister - 2024-08-23

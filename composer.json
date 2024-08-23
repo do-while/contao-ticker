@@ -15,28 +15,24 @@
         "source": "https://github.com/do-while/contao-ticker"
     },
     "require": {
-        "php": ">=5.6.0",
-        "contao/core-bundle": "~4.4"
+        "php": "^8.2",
+        "contao/core-bundle": "^5.3"
     },
     "autoload": {
         "psr-4": {
             "Softleister\\TickerBundle\\": "src/"
         },
         "classmap": [
-            "src/Resources/contao/"
+            "contao/"
         ],
         "exclude-from-classmap": [
-            "src/Resources/contao/cache/",
-            "src/Resources/contao/config/",
-            "src/Resources/contao/dca/",
-            "src/Resources/contao/languages/",
-            "src/Resources/contao/templates/"
+            "contao/config/",
+            "contao/dca/",
+            "contao/languages/",
+            "contao/templates/"
         ]
     },
     "extra": {
-        "branch-alias": {
-            "dev-develop": "1.1.x-dev"
-        },
-		"contao-manager-plugin": "Softleister\\TickerBundle\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "Softleister\\TickerBundle\\ContaoManager\\Plugin"
     }
 }

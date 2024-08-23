@@ -1,8 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * @copyright  Softleister 2008-2019
- * @author     Softleister <info@softleister.de>
+ * @copyright  Softleister 2008-2024
  * @package    contao-ticker
  * @license    MIT
  * @see	       https://github.com/do-while/contao-ticker
@@ -13,10 +14,10 @@ namespace Softleister\TickerBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-/**
- * Configures the Contao Ticker bundle.
- */
-class SoftleisterTickerBundle extends Bundle
+class TickerBundle extends Bundle
 {
-
+    public function getPath(): string
+    {
+        return \dirname(__DIR__);
+    }
 }

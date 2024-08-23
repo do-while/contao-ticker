@@ -1,12 +1,12 @@
 
 <!-- indexer::stop -->
 <?php
-  $GLOBALS['TL_CSS']['ticker'] = 'bundles/softleisterticker/style.css';
-  $GLOBALS['TL_JAVASCRIPT']['ticker'] = 'bundles/softleisterticker/telex.js';
+  $GLOBALS['TL_CSS']['ticker'] = 'bundles/ticker/style.css';
+  $GLOBALS['TL_JAVASCRIPT']['ticker'] = 'bundles/ticker/telex.js';
 ?>
-<section class="<?php echo $this->class; ?> block"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
-<?php if ($this->headline): ?>
-  <<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+<section class="<?= $this->class ?> block"<?= $this->cssID ?><?php if($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+<?php if($this->headline): ?>
+  <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
 <?php endif; ?>
   <div id="tx_<?= $this->ticker['id'] ?>" class="tickertext"></div>
 </section>
