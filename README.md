@@ -13,7 +13,7 @@ Das Tickermodul unterstützt InsertTags in den Tickermeldungen.
 
 
 Für einen Ticker mit Eventdaten bringt das Modul eigene InsertTags mit:<br>
-(ID ist jeweils die ID des Newsarchivs)
+(ID ist jeweils die ID des Kalenders)
 * **{{ticker::next_event::ID}}** wird durch Datum und Eventteaser des nächsten Termins ersetzt
 * **{{ticker::next_event2::ID}}** wird durch Datum und Eventteaser des 2. Termins ersetzt
 * **{{ticker::next_eventN::ID}}** wird durch Datum und Eventteaser des 2. bis 9. Termins (N = 2...9) ersetzt
@@ -49,7 +49,7 @@ A forwarding address can be assigned to each ticker text. Clicking on its ticker
 
 
 The module has its own insert tags for a ticker with event data:<br>
-(ID is the ID of the news archive in each case)
+(ID is the ID of the calendar in each case)
 * **{{ticker::next_event::ID}}** is replaced by the date and event teaser of the next event
 * **{{ticker::next_event2::ID}}** will be replaced by date and event teaser of the 2nd event
 * **{{ticker::next_eventN::ID}}** is replaced by the date and event teaser of the 2nd to 9th event (N = 2...9)
@@ -67,4 +67,4 @@ https://github.com/do-while/contao-ticker/issues
 
 
 ___
-Softleister - 2024-08-23
+Softleister - 2025-06-11
