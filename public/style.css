@@ -1,9 +1,9 @@
 /* Styles contao-ticker */
-.mod_ticker .tickertext { background-color:#eee; }
-.mod_ticker .tickertext a { text-decoration:none; }
-.mod_ticker .telex-msg { padding-top:0.3em; }
+.mod_ticker .tickertext, .ce_ticker .tickertext { background-color:#eee; }
+.mod_ticker .tickertext a, .ce_ticker .tickertext a { text-decoration:none; }
+.mod_ticker .telex-msg, .ce_ticker .telex-msg { padding-top:0.3em; }
 
-/* Farben */
+/* Farben Modules */
 .mod_ticker .msg-red, .mod_ticker .msg-red a {               background-color:#d32f2f; color:#ffcdd2; }
 .mod_ticker .msg-pink, .mod_ticker .msg-pink a {             background-color:#F8BBD0; color:#333; }
 .mod_ticker .msg-purple, .mod_ticker .msg-purple a {         background-color:#ce93d8; color:#333; }
@@ -25,3 +25,26 @@
 .mod_ticker .msg-bluegrey, .mod_ticker .msg-bluegrey a {     background-color:#37474f; color:#eceff1; }
 .mod_ticker .msg-white, .mod_ticker .msg-white a {           background-color:#ffffff; color:#333; }               
 .mod_ticker .msg-black, .mod_ticker .msg-black a {           background-color:#202020; color:#E0E0E0; }
+
+/* Farben ContentElements */
+.ce_ticker .msg-red, .ce_ticker .msg-red a {               background-color:#d32f2f; color:#ffcdd2; }
+.ce_ticker .msg-pink, .ce_ticker .msg-pink a {             background-color:#F8BBD0; color:#333; }
+.ce_ticker .msg-purple, .ce_ticker .msg-purple a {         background-color:#ce93d8; color:#333; }
+.ce_ticker .msg-deeppurple, .ce_ticker .msg-deeppurple a { background-color:#4527a0; color:#ede7f6; }
+.ce_ticker .msg-indigo, .ce_ticker .msg-indigo a {         background-color:#9fa8da; color:#333; }               
+.ce_ticker .msg-blue, .ce_ticker .msg-blue a {             background-color:#0d47a1; color:#e3f2fd; }
+.ce_ticker .msg-lightblue, .ce_ticker .msg-lightblue a {   background-color:#90caf9; color:#333; }               
+.ce_ticker .msg-cyan, .ce_ticker .msg-cyan a {             background-color:#006064; color:#e0f7fa; }
+.ce_ticker .msg-teal, .ce_ticker .msg-teal a {             background-color:#B2DFDB; color:#333; }               
+.ce_ticker .msg-green, .ce_ticker .msg-green a {           background-color:#1b5e20; color:#e8f5e9; }
+.ce_ticker .msg-lightgreen, .ce_ticker .msg-lightgreen a { background-color:#aed581; color:#333; }               
+.ce_ticker .msg-lime, .ce_ticker .msg-lime a {             background-color:#cddc39; color:#333; }               
+.ce_ticker .msg-yellow, .ce_ticker .msg-yellow a {         background-color:#ffee58; color:#333; }               
+.ce_ticker .msg-amber, .ce_ticker .msg-amber a {           background-color:#FFECB3; color:#333; }               
+.ce_ticker .msg-orange, .ce_ticker .msg-orange a {         background-color:#ffb74d; color:#333; }               
+.ce_ticker .msg-deeporange, .ce_ticker .msg-deeporange a { background-color:#e64a19; color:#fbe9e7; }
+.ce_ticker .msg-brown, .ce_ticker .msg-brown a {           background-color:#5d4037; color:#efebe9; }
+.ce_ticker .msg-grey, .ce_ticker .msg-grey a {             background-color:#bdbdbd; color:#333; }               
+.ce_ticker .msg-bluegrey, .ce_ticker .msg-bluegrey a {     background-color:#37474f; color:#eceff1; }
+.ce_ticker .msg-white, .ce_ticker .msg-white a {           background-color:#ffffff; color:#333; }               
+.ce_ticker .msg-black, .ce_ticker .msg-black a {           background-color:#202020; color:#E0E0E0; }

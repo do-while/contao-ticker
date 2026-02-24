@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * @copyright  Softleister 2008-2024
+ * @copyright  Softleister 2008-2026
  * @package    contao-ticker
  * @license    MIT
  * @see	       https://github.com/do-while/contao-ticker
@@ -11,6 +11,7 @@ declare(strict_types=1);
  */
 
 use Softleister\TickerBundle\ModuleTicker;
+use Softleister\TickerBundle\ContentTicker;
 
 
 /**
@@ -19,6 +20,12 @@ use Softleister\TickerBundle\ModuleTicker;
 $GLOBALS['BE_MOD']['content']['ticker'] = [
     'tables' => ['tl_ticker_category', 'tl_ticker'],
 ];
+
+
+/**
+ * Content elements
+ */
+$GLOBALS['TL_CTE']['miscellaneous']['ticker'] = ContentTicker::class;
 
 
 /**

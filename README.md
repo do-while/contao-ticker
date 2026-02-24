@@ -25,15 +25,17 @@ Das Tickerscript basiert auf dem Projekt https://github.com/sjaakp/telex
                                         
                                         
 **Version:**<br>
-* 2.0.0 stable - 2024-08-21<br>- Bundle für Contao ab 5.3<br>- Update sjaakp/telex von 2.0.4 auf 2.0.7
+* 2.1.0 - 2026-02-24<br>- Ticker auch als Inhaltselement verfügbar<br>- Twig-Templates<br>- läuft auch in Contao 5.7
 
-* 1.2.1 stable - 2020-05-20<br>- Update sjaakp/telex von 2.0.1 auf 2.0.4
+* 2.0.0 - 2024-08-21<br>- Bundle für Contao ab 5.3<br>- Update sjaakp/telex von 2.0.4 auf 2.0.7
 
-* 1.2.0 stable - 2019-04-18<br>- Einschränkung auf ausgewählte Kategorien möglich
+* 1.2.1 - 2020-05-20<br>- Update sjaakp/telex von 2.0.1 auf 2.0.4
 
-* 1.1.0 stable - 2019-03-08<br>- Probleme mit Contao 4.7 beseitigt,<br>- Die Geschwindigkeit hat eine neue Skalierung,<br>- Das Startdelay ist entfallen, wird von sjaakp/telex nicht mehr unterstützt
+* 1.2.0 - 2019-04-18<br>- Einschränkung auf ausgewählte Kategorien möglich
 
-* 1.0.0 stable - 2017-08-12<br>- Version für Contao ab Version 4.4 LTS
+* 1.1.0 - 2019-03-08<br>- Probleme mit Contao 4.7 beseitigt,<br>- Die Geschwindigkeit hat eine neue Skalierung,<br>- Das Startdelay ist entfallen, wird von sjaakp/telex nicht mehr unterstützt
+
+* 1.0.0 - 2017-08-12<br>- Version für Contao ab Version 4.4 LTS
 
 
 ___
@@ -67,4 +69,4 @@ https://github.com/do-while/contao-ticker/issues
 
 
 ___
-Softleister - 2025-06-11
+Softleister - 2026-02-24

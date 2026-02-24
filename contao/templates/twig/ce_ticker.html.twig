@@ -1,0 +1,40 @@
+
+<!-- indexer::stop -->
+<section class="{{ class }} block"{% if cssID %}{{ cssID|raw }}{% endif %}{% if style %} style="{{ style }}"{% endif %}>
+
+  {% if headline %}
+    <{{ hl }}>{{ headline }}</{{ hl }}>
+  {% endif %}
+
+  <div id="tx_{{ ticker.id }}" class="tickertext"></div>
+</section>
+
+{% if ticker is defined and ticker|length %}
+  {# Items für JS sicher als JSON #}
+  {% set jsItems = [] %}
+  {% for item in items %}
+    {% set jsItems = jsItems|merge([{
+      id: item.id,
+      class: item.class,
+      content: item.content
+    }]) %}
+  {% endfor %}
+
+  <script>
+  (function($) {
+    $(document).ready(function () {
+      Telex.widget(
+        "tx_{{ ticker.id|e('js') }}",
+        {
+          speed: {{ ticker.duration|default(0) }},
+          direction: {{ ticker.direction|default('left')|json_encode|raw }},
+          timing: {{ ticker.timing|default('linear')|json_encode|raw }},
+          pauseOnHover: {{ (ticker.pauseOnHover ?? false) ? 'true' : 'false' }}
+        },
+        {{ jsItems|json_encode|raw }}
+      );
+    });
+  })(jQuery);
+  </script>
+{% endif %}
+<!-- indexer::continue -->

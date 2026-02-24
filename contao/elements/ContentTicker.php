@@ -12,20 +12,15 @@ declare(strict_types=1);
 
 namespace Softleister\TickerBundle;
 
-use Contao\Module;
 use Contao\System;
 use Contao\StringUtil;
+use Contao\ContentElement;
 use Contao\BackendTemplate;
 
-class ModuleTicker extends Module
+class ContentTicker extends ContentElement
 {
-    protected $strTemplate = 'mod_ticker';
-    protected $arrTargets = [];
+    protected $strTemplate = 'ce_ticker';
 
-    /**
-     * Display a wildcard in the back end
-     * @return string
-     */
     public function generate( )
     {
         $container = System::getContainer( );
@@ -37,7 +32,7 @@ class ModuleTicker extends Module
             $objTemplate->wildcard = '### Ticker ###';
             $objTemplate->title = $this->headline;
             $objTemplate->id = $this->id;
-            $objTemplate->link = $this->name;
+            $objTemplate->link = $this->title;
             $objTemplate->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id=' . $this->id;
             
             return $objTemplate->parse( );
